@@ -1,21 +1,27 @@
 <template>
- <div >
-    <h1>BOOLFLIX</h1>
- </div>
- <div class="align-items-center">
-    <input type="text">
-    <button></button>
- </div>
-</template>
+    <div >
+           <h1>BOOLFLIX</h1>
+    </div>
+    <div >
+        <input type="text"/>
+        <button>Search</button>
+    </div>
 
-<script>
-    export default {
-        
-    }
-</script>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+      };
+    },
 
-<style lang="scss" scoped>
+  };
+  </script>
+  
+  <style lang="scss" scoped>
 h1{
     color: red;
 }
-</style>
+  </style>
+  

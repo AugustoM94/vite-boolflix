@@ -1,26 +1,30 @@
 <template>
     <header class="d-flex justify-content-between align-items-center bg-black ">
-        <HeaderApp/>
+        <HeaderApp />
     </header>
+
+
 </template>
 
 <script>
-import { store } from './assets/data/store';
+import { store } from './assets/data/store'; 
 import axios from 'axios';
 import HeaderApp from './components/HeaderApp.vue';
-  export default {
-    name: 'App',
+
+export default {
+  name: 'App',
   components: {
-    HeaderApp
+       HeaderApp
   },
   data() {
     return {
-      store,
-
+      store, 
     };
   },
-  }
+  
+}
 </script>
+
 
 <style lang="scss" scoped>
 
