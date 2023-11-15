@@ -1,5 +1,4 @@
-@import './base.scss';
-@use './partials/variables' as *;
+@use './style/partials.scss' as *;
 
 $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
