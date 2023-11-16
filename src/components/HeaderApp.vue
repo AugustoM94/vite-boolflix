@@ -1,9 +1,9 @@
 <template>
         <div class="px-3">
-      <h1>BOOLFLIX</h1>
+             <a href="#"></a><h1>BOOLFLIX</h1>
         </div>
       <div class="d-flex px-3 " v-if="showSearch">
-        <input type="text" class="form-control" placeholder="Cerca film..." v-model="searchQuery" />
+        <input type="text" class="form-control" placeholder="Cerca film..." v-model="searchQuery" @keyup.enter="emitSearch"/>
         <button class="btn btn-outline-secondary" type="button" @click="emitSearch">cerca</button>
       </div>
 

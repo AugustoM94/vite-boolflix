@@ -3,20 +3,26 @@
     <header class="d-flex justify-content-between align-items-center bg-black">
       <HeaderApp @searchMovie="handleSearch" />
     </header>
-    <main>
-      <div class="row">
+    <main >
+      <section id="movie" class="container">
+        <h2 class="py-3">Film</h2>
+        <div class="row gy-3 ">
         <div class="card-width col-12 col-md-4 col-lg-3">
-          <h2 class="py-3">Film</h2>
           <CardApp :movies="store.movieList" />
         </div>    
       </div>
-      <div class="row">
+      </section>
+     <section id="series" class="container">
+      <h2 class="py-3">Serie</h2>
+      <div class="row gy-3">
         <div class="card-width  col-12 col-md-4 col-lg-3">
-          <h2 class="py-3">Serie</h2>
           <CardApp :series="store.seriesList" />
         </div>    
       </div>
-    </main>
+    </section>
+
+      </main>
+
   </div>
 </template>
 
