@@ -9,7 +9,15 @@ $fa-font-path: '../webfonts';
 @import 'bootstrap/scss/bootstrap';
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
-
-
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+    cursor: default;
+    user-select: none;
+}
