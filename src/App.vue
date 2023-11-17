@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import { TransitionGroup } from 'vue';
 import { store } from './assets/data/store';
 import HeaderApp from './components/HeaderApp.vue';
 import CardApp from './components/CardApp.vue';
@@ -47,7 +46,7 @@ export default {
     return {
       
            store,
-    };
+    }
   },
   methods: {
     getMoviesAndSeries() {
@@ -66,6 +65,13 @@ export default {
     handleSearch(query) {
       this.store.params.query = query;
       this.getMoviesAndSeries();
+    },
+    getMostPopularMovies() {
+      const mostPopularUrl = this.store.apiUrl + 'movie/popular';
+      axios.get(mostPopularUrl, { params: this.store.params }).then((res) => {
+        console.log(res.data.results);
+        this.store.mostPopularMovies = res.data.results;
+      });
     },
   },
 };
@@ -98,13 +104,14 @@ main{
   height: 500px;
 }
 body {
-  background-color: #141414; 
-  color: white; 
+  background-color: #141414;
+    color: white;
+    font-family: 'Arial', sans-serif;
 }
 
 #movie,
 #series {
-  min-height: 500px;
+  min-height: 400px;
   background-color: #141414; 
 }
 
@@ -113,4 +120,12 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+  main {
+    overflow-y: hidden;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
   </style>

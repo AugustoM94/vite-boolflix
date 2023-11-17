@@ -95,83 +95,87 @@ export default {
 };
 </script>
 
+// CardApp.vue
 <style lang="scss" scoped>
-  .img-flag {
-    max-width: 20px;
-    margin-left: 5px;
-  }
-
   .card {
-    min-width: 342px;
-    min-height: 350px;
-    border-radius: 10px;
+    min-width: 350px;
+    min-height: 400px;
+    border-radius: 8px;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
     position: relative;
     margin-right: 10px;
-    background-color: black;
+    background-color: #202020;  // Colore di sfondo scuro
     color: white;
-  }
 
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  }
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-  .card-img-top {
-    border-radius: 10px 10px 0 0;
-  }
+    .card-img-top {
+      border-radius: 8px 8px 0 0;
+    }
 
-  .card-body {
-    padding: 15px;
-  }
+    .card-body {
+      padding: 15px;
+    }
 
-  .card-text {
-  font-size: 0.9rem;
-  color: white;
-  overflow: hidden;  
-  max-height: 150px;
-}
+    .card-text {
+      font-size: 0.9rem;
+      color: white;
+      overflow: hidden;
+      max-height: 150px;
+    }
 
-  .card-body > img {
-    width: 100%;
-  }
+    .star-rating {
+      margin-top: 10px;
 
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-in-out;
-  }
+      i {
+        margin-right: 3px;
+      }
+    }
 
-  .flip-card-front,
-  .flip-card-back {
-    overflow-x: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    background-color: black;
-    color: white;
-  }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease-in-out;
+    }
 
-  .flip-card-back {
-    transform: rotateY(180deg);
-  }
+    .flip-card-front,
+    .flip-card-back {
+      overflow-x: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      background-color: #202020;  // Colore di sfondo scuro
+      color: white;
+    }
 
-  .flipped .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
 
-  .card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
+    .flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
 
-  .overview-scroll {
-    max-height: 300px;
-    overflow-y: auto; 
+    &:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .overview-scroll {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .card-text.scrollable {
+      overflow: auto;
+    }
+  .img-flag{
+    width: 30px;
   }
-  .card-text.scrollable {
-  overflow: auto;   
   }
- 
 </style>
+
